@@ -1,70 +1,221 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-	<div
-		class="min-h-screen bg-gradient-to-br from-white to-gray-100 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-		<div class="text-center mt-16">
-      <div class="w-full m-auto">
-				<a href="https://lalaz.dev" target="_blank">
-        	<img class="m-auto text-center" src="{{ asset('img/logo.svg') }}" alt="Lalaz Framework Logo">
-				</a>
-      </div>
-			<h1 class="text-4xl font-extrabold text-purple-500 sm:text-5xl lg:text-6xl mb-6"> Easy Development, Simple Deployment</h1>
-			<p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
-        a curated collection of tools and utilities designed to enhance your coding experience and streamline project creation.
-			</p>
-
-			<div class="flex justify-center space-x-4 mb-16">
-				<a class="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors duration-300 hover:border-gray-800" href="https://github.com/elasticmind-io/lalaz-framework" target="_blank" rel="noopener noreferrer">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewbox="0 0 24 24" class="">
-						<path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
-					</svg>
-					<p>Star on GitHub</p>
-				</a>
-			</div>
-		</div>
-
-		<div
-			class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-			<div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-				<div class="flex items-center mb-4">
-					<svg class="w-8 h-8 text-purple-500 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h18M3 10h18M3 15h18M3 20h18"></path>
-					</svg>
-					<h2 class="text-2xl font-semibold text-gray-900">Documentation</h2>
+		<!-- Slider Area -->
+		<section class="slider" id="home">
+			<div class="single-slider" style="background-image:url('/public/img/slider.jpg')">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7">
+							<div class="text">
+								<h1>Cuidar de quem cuida</h1>
+								<p>Um espaço seguro para sentir, respirar e recomeçar. </p>
+								<div class="button">
+									<a href="https://wa.me/5511911642675" target="_blank" class="btn">Agendar Consulta</a>
+									<a href="#atendimento" class="btn primary">Saiba Mais</a>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<p class="text-gray-600 mb-6">
-					Find comprehensive guides and in-depth information to help you build your Lalaz projects with ease.
-				</p>
-				<a href="https://lalaz.dev/docs" target="_blank" class="text-purple-500 hover:text-purple-400 inline-flex items-center font-medium">
-					Read the Docs
-					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
-					</svg>
-				</a>
 			</div>
-
-			<div class="bg-white shadow-lg rounded-xl p-8 hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-				<div class="flex items-center mb-4">
-					<svg class="w-8 h-8 text-purple-500 mr-3" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
-					</svg>
-					<h2 class="text-2xl font-semibold text-gray-900">Learn</h2>
+		</section>
+		<!--/ End Slider Area -->
+		
+		<!-- Start Schedule Area -->
+		<section class="schedule">
+			<div class="container">
+				<div class="schedule-inner">
+					<div class="row">
+						<div class="col-lg-4 col-md-6 col-12 ">
+							<!-- single-schedule -->
+							<div class="single-schedule first">
+								<div class="inner">
+									<div class="icon">
+										<i class="fa fa-ambulance"></i>
+									</div>
+									<div class="single-content">
+										<h4>Psicologia Clínica</h4>
+										<p>Atendimentos terapêuticos para adultos, com escuta acolhedora e sensível. As sessões abordam questões como ansiedade, depressão, sobrecarga emocional, traumas, relacionamentos, autoestima, ciclos de mudança e autoconhecimento.</p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule middle">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-prescription"></i>
+									</div>
+									<div class="single-content">
+										<h4>Psicologia Obstétrica</h4>
+										<p>Acompanhamento psicológico especializado em todas as fases da jornada da mulher que envolvem gestar, parir, maternar ou desejar ser mãe. O cuidado também se estende à rede de apoio, como parceiros, companheiras e familiares próximos.</p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-12 col-12">
+							<!-- single-schedule -->
+							<div class="single-schedule last">
+								<div class="inner">
+									<div class="icon">
+										<i class="icofont-ui-clock"></i>
+									</div>
+									<div class="single-content">
+										<h4>Abordagem Integrativa</h4>
+										<p>Minha escuta clínica tem base na psicanálise, com um olhar ampliado e integrativo. Nos atendimentos, também utilizo recursos da psicologia integrativa e práticas complementares inspiradas nas terapias holísticas e na medicina tradicional chinesa.</p>
+										<a href="#">LEARN MORE<i class="fa fa-long-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-				<p class="text-gray-600 mb-6">
-					Take an interactive course with quizzes and challenges to get hands-on experience building with Lalaz.
-				</p>
-				<a href="https://lalaz.dev/learn" target="_blank" class="text-purple-500 hover:text-purple-400 inline-flex items-center font-medium">
-					Start Learning
-					<svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M12 5l7 7-7 7"></path>
-					</svg>
-				</a>
 			</div>
-		</div>
+		</section>
+		<!--/End Start schedule Area -->
 
-		<footer class="mt-16 text-center text-gray-500">
-			<p>&copy; 2024 Lalaz. Easy Development, Simple Deployment.</p>
-		</footer>
-	</div>
+		<!-- Start Why choose -->
+		<section class="why-choose section" id="bem-vinda">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Bem-vinda (o)</h2>
+							<img src="/public/img/section-img.png" alt="#">
+							<p>Aqui, cada história importa. Cada fase da vida, especialmente os ciclos que envolvem o ser mulher, gestar, parir, maternar ou simplesmente existir merece ser vivida com presença, amparo e consciência.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Left -->
+						<div class="choose-left">
+							<h3>Quem sou eu?</h3>
+							<p>Sou Tainá Bichler, Psicóloga Clínica e Obstétrica.
+							Meu propósito é caminhar ao seu lado com escuta empática e acolhimento, oferecendo um espaço seguro para que você possa se acolher, se escutar e se fortalecer.
+							Este é um convite para você respirar, se cuidar e se permitir.
+							<p>Agende um atendimento ou conheça mais sobre o meu trabalho.</p>
+							<div class="button">
+								<a href="https://wa.me/5511911642675" target="_blank" class="btn">Agendar Consulta</a>
+							</div>
+						</div>
+						<!-- End Choose Left -->
+					</div>
+					<div class="col-lg-6 col-12">
+						<!-- Start Choose Rights -->
+						<div class="choose-right">
+							<div class="video-image">
+							</div>
+						</div>
+						<!-- End Choose Rights -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Why choose -->
+		
+		<!-- Start Call to action -->
+		<section class="call-action overlay" data-stellar-background-ratio="0.5"  id="playlist">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 col-md-12 col-12">
+						<div class="content">
+							<h2>Precisa de um respiro?</h2>
+							<p>Entre tantos ruídos e pressas do dia, às vezes tudo o que a gente precisa é de um espaço de pausa.
+								Te convido a conhecer a playlist “Cuidado Começa Dentro”, criada com carinho por mim, Tainá Bichler — psicóloga clínica e obstétrica.
+								Você vai encontrar meditações guiadas, músicas suaves e sons que acolhem. Ideal para relaxar, respirar fundo, se escutar e lembrar: você não precisa dar conta de tudo.
+							</p>
+							<p>Clique no botão abaixo e permita-se esse momento de cuidado.</p>
+							<div class="button">
+								<a href="#" class="btn">🎧 Ouvir no Spotify</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End Call to action -->
+		
+		<!-- Start service -->
+		<section class="services section" id="atendimento">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>Como Funciona o Atendimento</h2>
+							<img src="/public/img/section-img.png" alt="#">
+							<p>Cuidado emocional com conforto e praticidade</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-prescription"></i>
+							<h4><a href="service-details.html">Atendimento 100% online</a></h4>
+							<p>Realizado via Google Meet, garantindo acessibilidade e flexibilidade para sua rotina. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-tooth"></i>
+							<h4><a href="service-details.html">Ambiente seguro e sigiloso</a></h4>
+							<p>Conversa protegida por sigilo profissional, em um espaço acolhedor e ético. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-heart-alt"></i>
+							<h4><a href="service-details.html">Duração das sessões</a></h4>
+							<p>Cada encontro tem 50 minutos, com frequência definida conforme sua necessidade. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-listening"></i>
+							<h4><a href="service-details.html">Espaço só seu</a></h4>
+							<p>Um tempo dedicado para você se ouvir, se acolher e elaborar seus sentimentos. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-eye-alt"></i>
+							<h4><a href="service-details.html">Agendamento facilitado</a></h4>
+							<p>Entre em contato pelo WhatsApp ou formulário de forma prática e rápida.</p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+					<div class="col-lg-4 col-md-6 col-12">
+						<!-- Start Single Service -->
+						<div class="single-service">
+							<i class="icofont icofont-blood"></i>
+							<h4><a href="service-details.html">Link enviado por e-mail</a></h4>
+							<p>Você recebe o acesso à sessão com antecedência, garantindo tranquilidade no dia do atendimento. </p>	
+						</div>
+						<!-- End Single Service -->
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<div class="get-quote">
+							<a href="https://wa.me/5511911642675" target="_blank" class="btn">Agendar Consulta</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--/ End service -->
 {% endblock %}

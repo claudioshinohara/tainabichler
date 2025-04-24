@@ -34,8 +34,7 @@ export default defineConfig({
     manifest: 'manifest.json',
     rollupOptions: {
       input: {
-        'main.module.js': './src/App/Assets/js/main.js',
-        'styles.module.css': './src/App/Assets/css/styles.css'
+        'main.module.js': './src/App/Assets/js/main.js'
       },
       output: {
         entryFileNames: 'js/[name].[hash].js',
@@ -48,19 +47,5 @@ export default defineConfig({
       }
     }
   },
-  plugins: [
-    copy({
-      targets: [
-        {
-          src: './src/App/Assets/img/**',
-          dest: './public/dist/img'
-        }
-      ],
-      hook: 'writeBundle',
-    }),
-    updateManifestWithImages({
-      outDir: './public/dist',
-      imageDir: './public/dist/img'
-    })
-  ],
+  plugins: [],
 })
