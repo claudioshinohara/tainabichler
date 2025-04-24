@@ -1,0 +1,96 @@
+name: Lalaz Deploy
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: 🔨 Setup PHP without any shared extensions except mbstring
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.2'
+        extensions: mbstring
+
+    - name: Validate composer.json and composer.lock
+      run: |
+        composer validate --strict
+
+    - name: Cache Composer packages
+      id: composer-cache
+      uses: actions/cache@v4
+      with:
+        path: vendor
+        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-php-
+
+    - name: 🔨 Install dependencies
+      run: |
+        composer install --prefer-dist --no-progress
+
+    - name: Install Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20.x
+
+    - name: 🔨 Install Dependencies
+      run: |
+        npm install
+
+    - name: 🔨 Build asset pipeline
+      run: |
+        npm run build
+
+    - name: 🚚 Upload artifact to enable deployment
+      uses: actions/upload-artifact@v4
+      with:
+        name: package
+        path: ./
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📂 Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: package
+          path: ./
+
+      - name: 🚚 Create .env file
+        run: |
+          touch ./src/App/.env
+          echo "${{ secrets.PRODUCTION_ENV }}" >> ./src/App/.env
+
+      - name: 🚀 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ vars.SFTP_HOST }}
+          username: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASSWORD }}
+          exclude: |
+            README
+            README.md
+            compose.yml
+            composer.json
+            composer.lock
+            package.json
+            package-lock.json
+            postcss.config.js
+            tailwind.config.js
+            vite.config.js
+            lalaz
+            **/.git*
+            **/.git*/**
+            **/.gitkeep
+            **/node_modules/**
