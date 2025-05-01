@@ -56,7 +56,7 @@ Version:	1.1
 .header .top-contact li {
 	display: inline-block;
 	margin-right: 25px;
-	color: #2C2D3F;
+	color: #3A3A3A;
 	font-size: 13px;
 }
 .header .header-inner .get-quote {
@@ -429,7 +429,7 @@ Version:	1.1
 }
 .slicknav_nav {
 	clear: both;
-	color: #2C2D3F;
+	color: #3A3A3A;
 	margin: 0;
 	font-size: .875em;
 	background: transparent;
@@ -438,7 +438,7 @@ Version:	1.1
 	
 }
 .slicknav_nav li a {
-	color: #2C2D3F;
+	color: #3A3A3A;
 	transition: all 0.4s ease;
 	background: none;
 	padding: 4px 10px;
@@ -452,14 +452,14 @@ Version:	1.1
 	margin:0;
 }
 .slicknav_nav li:hover a{
-	color:#1A76D1;
+	color:#C68052;
 }
 .slicknav_nav li .dropdown li a{
-	color:#2C2D3F;
+	color:#3A3A3A;
 	background:transparent;
 }
 .slicknav_nav li .dropdown li a:hover{
-	color:#1A76D1;
+	color:#C68052;
 }
 .slicknav_nav li .slicknav_item{
 	background:transparent;
@@ -471,15 +471,15 @@ Version:	1.1
 	font-weight:400;
 }
 .slicknav_menu .slicknav_icon-bar {
-	background-color: #1A76D1;
+	background-color: #C68052;
 	box-shadow: none;
 	text-shadow: none;
 }
 .slicknav_nav .slicknav_arrow{
-	color:#2C2D3F;
+	color:#3A3A3A;
 }
 .slicknav_nav li:hover .slicknav_arrow{
-	color:#1A76D1;
+	color:#C68052;
 }
 .slicknav_menu .slicknav_icon-bar {
 	display: block;
