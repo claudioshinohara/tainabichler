@@ -10,11 +10,12 @@ Version:	1.1
 # Normalize
 --------------------------------------------------------------*/
 html {
-	 font-family: 'Poppins', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	text-size-adjust: 100%;
+	scroll-behavior: smooth;
 }
 html,body {
 	height: 100%;
@@ -480,7 +481,6 @@ Preloader Area CSS
 .section-title h2 {
 	font-size: 32px;
 	font-weight: 600;
-	text-transform: capitalize;
 	margin-bottom: 24px;
 	position: relative;
 	color: #3A3A3A;
@@ -602,6 +602,7 @@ Preloader Area CSS
 --------------------------------------------------------------*/
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
