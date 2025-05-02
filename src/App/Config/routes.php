@@ -13,4 +13,7 @@ function onRouterInitialized()
 {
     // Public Routes
     Route::get('/', 'HomeController@index');
+    Route::get('/quem-sou-eu', 'QuemController@index');
+    Route::get('/para-voce', 'ParaVoceController@index');
+    Route::get('/duvidas', 'DuvidasController@index');
 }
