@@ -1042,7 +1042,7 @@ body{
 .why-choose .choose-right{
 	height:100%;
 	width:100%;
-	background-image:url('/public/v4/img/video-bg.jpg');
+	background-image:url('/public/v5/img/video-bg.jpg');
 	background-size:cover;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -3222,6 +3222,7 @@ body{
 	background: #fff;
 	color: #333;
 	border: 1px solid #eee;
+	padding-right: 40px;
 }
 .accordion a:hover {
   color:#fff !important;
@@ -3230,7 +3231,7 @@ body{
 .accordion a:after {
   position: absolute;
   right: 20px;
-  content: "+";
+  content: "\25BE";
   top: 16px;
   color: #232323;
   font-size: 25px;
@@ -3256,7 +3257,7 @@ body{
   border: 1px solid #C68052;
 }
 .accordion li a.active:after {
-  content: "-";
+  content: "\25B4";
   font-size: 25px;
   color: #ffffff;
 }
@@ -4059,7 +4060,6 @@ body{
 .footer .single-footer.f-link li a {
 	display: block;
 	color: #fff;
-	text-transform: capitalize;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;

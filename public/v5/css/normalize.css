@@ -471,7 +471,7 @@ Preloader Area CSS
 	transform: scaleX(1);
 }
 .section{
-	padding:20px 0;
+	padding:20px 0px 60px;
 }
 .section-title{
 	text-align: center;

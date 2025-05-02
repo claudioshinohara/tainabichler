@@ -16,4 +16,5 @@ function onRouterInitialized()
     Route::get('/quem-sou-eu', 'QuemController@index');
     Route::get('/para-voce', 'ParaVoceController@index');
     Route::get('/duvidas', 'DuvidasController@index');
+    Route::get('/politica-atendimento', 'PoliticaController@index');
 }
