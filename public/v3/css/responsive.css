@@ -125,7 +125,7 @@ Version:	1.1
 	padding-top: 15px;
 }
 .slider .single-slider {
-	height: 380px;
+	height: 420px;
 }
 .schedule {
 	background: #fff;
@@ -133,7 +133,6 @@ Version:	1.1
 	padding: 0;
 	height: auto;
 	padding: 70px 0;
-	border-bottom:1px solid #eee;
 }
 .schedule .schedule-inner {
 	transform: none;
@@ -157,7 +156,7 @@ Version:	1.1
 .slider .single-slider h1 {
 	font-size: 36px;
 	font-weight: 600;
-	line-height: 35px;
+	line-height: 45px;
 }
 .slider .single-slider .text {
 	margin-top: 80px;
@@ -576,7 +575,7 @@ Version:	1.1
 	text-align: center;
 }
 .slider .single-slider {
-	height: 380px;
+	height: 420px;
 }
 .schedule {
 	background: #fff;
@@ -607,7 +606,7 @@ Version:	1.1
 .slider .single-slider h1 {
 	font-size: 36px;
 	font-weight: 600;
-	line-height: 35px;
+	line-height: 45px;
 }
 .slider .single-slider .text {
 	margin-top: 80px;
@@ -1066,7 +1065,7 @@ Version:	1.1
 	text-align: center;
 }
 .slider .single-slider {
-	height: 380px;
+	height: 420px;
 }
 .schedule {
 	background: #fff;
@@ -1074,7 +1073,6 @@ Version:	1.1
 	padding: 0;
 	height: auto;
 	padding: 50px 0;
-	border-bottom:1px solid #eee;
 }
 .schedule .schedule-inner {
 	transform: none;
@@ -1098,13 +1096,13 @@ Version:	1.1
 .slider .single-slider h1 {
 	font-size: 36px;
 	font-weight: 600;
-	line-height: 25px;
+	line-height: 45px;
 }
 .slider .single-slider p{
 	font-size:16px;
 }
 .slider .single-slider .text {
-	margin-top: 20px;
+	margin-top: 80px;
 }
 .slider .single-slider .button .btn{
 	margin:0;
